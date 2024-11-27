@@ -40,6 +40,6 @@ When running in parallel, ensure sufficient system resources.
 Posterior samples are saved in filelocation.
 
 --------
-# Example 
+# Demo
 
 We refer users to run 'code/Mixabs.py ', 'code/Mixabs_GLMALA_bingxing.py' or 'code/Mixabs_bingxing.py' for an example.
