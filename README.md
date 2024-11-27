@@ -31,14 +31,10 @@ The project depends on the following Python packages:
 - batch_size: Batch size.
 - tau: Temperature parameter (for GMLALA).
 - num_grad: Number of samples for gradient estimation (for GMLALA).
-  
-Notes
+--------  
+# Notes
 
-Ensure all file paths are correct.
-
-Adjust parameter settings according to your needs.
-
-When running in parallel, ensure sufficient system resources.
+Ensure all file paths are correct. Adjust parameter settings according to your needs. When running in parallel, ensure sufficient system resources.
 
 --------
 # Output
