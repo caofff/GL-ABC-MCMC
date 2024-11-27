@@ -33,9 +33,13 @@ The project depends on the following Python packages:
 - num_grad: Number of samples for gradient estimation (for GMLALA).
   
 Notes
+
 Ensure all file paths are correct.
+
 Adjust parameter settings according to your needs.
+
 When running in parallel, ensure sufficient system resources.
+
 --------
 # Output
 Posterior samples are saved in filelocation.
