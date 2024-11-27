@@ -8,9 +8,11 @@ ABC-GL-MCMC is a python project of a recently proposed adaptive ABC-MCMC with Gl
 - GLMCMC.py: Implements the ABC-GL-MCMC with i-SIR as the global proposal and ordinary ABC-MCMC as local proposal.
 - GLMALA.py: Implements the ABC-GL-MCMC with i-SIR as the global proposal and combining ABC and Metropolis-Adjusted Langevin Algorithm (MALA) as local proposal.
 - GLMCMC_NFs.py: Implements the GL-MCMC algorithm that utilizes Normalizing Flows to improve importance proposals of i-SIR.
+- ESJD.R: ESJD() function is provided to calculate expected squared jump distance (ESJD).
 - Mixabs.py: Defines a mixture distribution model Mixture_set and provides example usage.
-- Mixabs_GLMALA_bingxing.py: Runs the GL-MALA algorithm in parallel using multiprocessing.
-- Mixabs_bingxing.py: Runs the GL-MCMC algorithm in parallel using multiprocessing.
+- Mixabs_bingxing.py: Runs the GLMCMC.py in parallel using multiprocessing.
+- Mixabs_GLMALA_bingxing.py: Runs the GLMALA.py in parallel using multiprocessing.
+- NF_Mixabs: Runs the GLMCMC_NFs.py for Mixabs example.
 --------
 # Installation Dependencies
 The project depends on the following Python packages:
@@ -19,6 +21,7 @@ The project depends on the following Python packages:
 - numpy
 - matplotlib
 - normflows
+- secrets
 --------
 # Parameter Descriptions
 - num_ite: Number of iterations.
