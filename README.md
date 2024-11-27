@@ -1,6 +1,6 @@
 # Summary
 
-ABC-GL-MCMC is a python project of a recently proposed adaptive ABC-MCMC with Global-Local proposals (GL-ABC-MCMC).
+ABC-GL-MCMC is a python project of a recently proposed adaptive ABC-MCMC with Global-Local proposals (GL-ABC-MCMC) that targets for complex posterior distributions with intractable likelihood functions. 
 
 --------
 # Main File Descriptions
