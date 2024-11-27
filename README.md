@@ -1,6 +1,6 @@
 # Summary
 
-ABC-GL-MCMC is a python project of a recently proposed adaptive ABC-MCMC with Global-Local proposals (GL-MCMC).
+ABC-GL-MCMC is a python project of a recently proposed adaptive ABC-MCMC with Global-Local proposals (GL-ABC-MCMC).
 
 --------
 # Main File Descriptions
