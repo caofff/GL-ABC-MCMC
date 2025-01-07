@@ -1,13 +1,13 @@
 # Summary
 
-ABC-GL-MCMC is a python project of a recently proposed adaptive ABC-MCMC with Global-Local proposals (GL-ABC-MCMC) that targets for complex posterior distributions with intractable likelihood functions. 
+GL-ABC-MCMC is a python project of a recently proposed adaptive ABC-MCMC with Global-Local proposals (GL-ABC-MCMC) that targets for complex posterior distributions with intractable likelihood functions. 
 
 --------
 # Main File Descriptions
 ### Main function
 - GlobalMCMC.py: Implements ABC-MCMC with Global-Local proposals.
-- GLMCMC.py: Implements the ABC-GL-MCMC with i-SIR as the global proposal and ordinary ABC-MCMC as local proposal.
-- GLMALA.py: Implements the ABC-GL-MCMC with i-SIR as the global proposal and combining ABC and Metropolis-Adjusted Langevin Algorithm (MALA) as local proposal.
+- GLMCMC.py: Implements the GL-ABC-MCMC with i-SIR as the global proposal and ordinary ABC-MCMC as local proposal.
+- GLMALA.py: Implements the GL-ABC-MCMC with i-SIR as the global proposal and combining ABC and Metropolis-Adjusted Langevin Algorithm (MALA) as local proposal.
 - GLMCMC_NFs.py: Implements the GL-MCMC algorithm that utilizes Normalizing Flows to improve importance proposals of i-SIR.
 - ESJD.R: ESJD() function is provided to calculate expected squared jump distance (ESJD).
 
