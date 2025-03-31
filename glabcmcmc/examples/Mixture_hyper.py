@@ -11,10 +11,10 @@ import random
 
 Model = Mixture_set(epsilon=0.05)
 torch.manual_seed(0)
+np.random.seed(0)
 num_ite = 1000000
 theta0 = torch.tensor([0.0, 0.0])
 y0 = Model.generate_samples(theta0)
-torch.manual_seed(0)
 lp = distribution.DiagGaussian(2, loc=torch.zeros(1, 2), log_scale=torch.log(torch.tensor([0.35, 0.35])))
 ip = distribution.DiagGaussian(2, torch.tensor([0.0, 0.0]), torch.tensor([0.0, 0.0]))
 gp = distribution.DiagGaussian(2, torch.tensor([0.0, 0.0]), torch.tensor([0.0, 0.0]))
