@@ -9,7 +9,10 @@ setup(
         'tqdm>=4.64.0',
         'numpy<2',
         'normflows>=1.7.2',
-        'scipy>=1.8.1'
+        'scipy>=1.8.1',
+        'pandas>=2.2.2',
+        'matplotlib>=3.8.2',
+        'seaborn>=0.13.2'
     ],
     author="Xuefei Cao, Shijia Wang, and Yongdao Zhou",
     author_email="xuefeic@mail.nankai.edu.cn, Wangshj1@shanghaitech.edu.cn, and ydzhou@nankai.edu.cn",
