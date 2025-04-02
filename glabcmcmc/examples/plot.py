@@ -5,8 +5,8 @@ from matplotlib import cm
 from matplotlib.colors import Normalize
 # 指定列名
 column_names = ['theta1', 'theta2']
-# MCMC = pd.read_csv('glmcmc_results.csv', names=column_names)
-MCMC = pd.read_csv('easyabc_Marjoram.csv', names=column_names)
+MCMC = pd.read_csv('glmcmc_results.csv', names=column_names)
+# MCMC = pd.read_csv('easyabc_Marjoram.csv', names=column_names)
 # 选择需要的数据
 data_subset = MCMC.iloc[30000:40000]  # 注意 Python 的索引从 0 开始
 
