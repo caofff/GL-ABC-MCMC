@@ -34,6 +34,7 @@ Or install from source:
 ```bash
 git clone https://github.com/caofff/GL-ABC-MCMC.git
 cd GL-ABC-MCMC
+conda activate pytorch
 pip install -e .
 ```
 
@@ -135,8 +136,7 @@ esjd_global = esjd(chain_global)
 
 Or run the code in the terminal
 ```bash
-cd GL-ABC-MCMC/glabcmcmc/examples
-conda activate pytorch
+cd glabcmcmc/examples
 python3 Mixture_hyper.py
 python3 Mixture.py
 python3 plot.py
