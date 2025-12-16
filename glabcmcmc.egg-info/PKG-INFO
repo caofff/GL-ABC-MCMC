@@ -1,17 +1,32 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: glabcmcmc
-Version: 0.0.1
+Version: 1.0.1
 Summary: A simple Python package
 Home-page: https://github.com/caofff/GL-ABC-MCMC
 Author: Xuefei Cao, Shijia Wang, and Yongdao Zhou
 Author-email: xuefeic@mail.nankai.edu.cn, Wangshj1@shanghaitech.edu.cn, and ydzhou@nankai.edu.cn
-License: UNKNOWN
-Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
 Requires-Python: >=3.8
 Description-Content-Type: text/markdown
+Requires-Dist: torch>=1.12.1
+Requires-Dist: tqdm>=4.64.0
+Requires-Dist: numpy<2
+Requires-Dist: normflows>=1.7.2
+Requires-Dist: scipy>=1.8.1
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: matplotlib>=3.8.2
+Requires-Dist: seaborn>=0.13.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
 
 # GL-ABC-MCMC
 
@@ -25,6 +40,7 @@ GL-ABC-MCMC is a Python package, whichoffers a variety of GL-ABC-MCMC sampling m
   - `GLMCMC`: The global proposal of `GlobalMCMC` is replaced with one constructed using iSIR.
   - `GLMALA`: This version uses MALA as the local proposal in the  `GLMCMC` algorithm.
   -`GLMCMC-NFs`: Building upon GLMCMC, this implementation utilizes normalizing flows to enhance the global proposal distribution. 
+  - `AGLMCMC`: By introducing an intermediate objective function, the global proposal is gradually improved during the iterative process using a density estimator.
 
 - **Built-in Probability Distributions**:
   - Uniform distribution
@@ -49,6 +65,7 @@ Or install from source:
 ```bash
 git clone https://github.com/caofff/GL-ABC-MCMC.git
 cd GL-ABC-MCMC
+conda activate pytorch
 pip install -e .
 ```
 
@@ -150,8 +167,7 @@ esjd_global = esjd(chain_global)
 
 Or run the code in the terminal
 ```bash
-cd GL-ABC-MCMC/glabcmcmc/examples
-conda activate pytorch
+cd glabcmcmc/examples
 python3 Mixture_hyper.py
 python3 Mixture.py
 python3 plot.py
@@ -187,4 +203,3 @@ If you use this package in your research, please cite:
 ## Contributing
 
 Contributions are welcome! Please feel free to submit issues and pull requests.
-

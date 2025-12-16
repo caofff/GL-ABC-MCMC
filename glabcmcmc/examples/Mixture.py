@@ -35,10 +35,20 @@ class Mixture_set:
         self.y_obs = self.y_obs.view(-1, self.y_dim)
         return torch.sqrt(torch.sum((y - self.y_obs) ** 2, dim=1))
 
-    def calculate_log_kernel(self, y):
+    def calculate_log_kernel(self, y,epsilon=None):
+        if epsilon == None:
+            epsilon = self.epsilon
         dis = self.discrepancy(y)
         log_value = distribution.DiagGaussian(1, loc=torch.tensor([0.0]),
-                                              log_scale=torch.log(torch.tensor([self.epsilon]))).log_prob(
+                                              log_scale=torch.log(torch.tensor([epsilon]))).log_prob(
+            dis.view(-1, 1))
+        return log_value
+
+    def calculate_log_kernel_dis(self, dis, epsilon=None):
+        if epsilon == None:
+            epsilon = self.epsilon
+        log_value = distribution.DiagGaussian(1, loc=torch.tensor([0.0]),
+                                              log_scale=torch.log(torch.tensor([epsilon]))).log_prob(
             dis.view(-1, 1))
         return log_value
 
@@ -51,7 +61,7 @@ if __name__ == "__main__":
     Model = Mixture_set(epsilon=0.05)
     torch.manual_seed(0)
     np.random.seed(0)
-    num_ite = 1000000
+    num_ite = 1000
     theta0 = torch.tensor([0.0, 0.0])
     y0 = Model.generate_samples(theta0)
     lp = distribution.DiagGaussian(2, loc=torch.zeros(1, 2), log_scale=torch.log(torch.tensor([0.35, 0.35])))
@@ -61,6 +71,9 @@ if __name__ == "__main__":
     runner = MCMCRunner(Model, output_dir='./')
     # chain_global = runner.run_global_mcmc(num_ite, theta0, y0, 0.5, lp, gp, output_file='global_mcmc_results.csv')
     chain_glmcmc = runner.run_glmcmc(num_ite, theta0, y0, 0.9, lp, ip, 5, output_file='glmcmc_results.csv')
+    # chain_Aglmcmc = runner.run_aglmcmc(num_ite, theta0, y0, 1, lp, ip, 5,200,0.8,
+    #                                     0.2, output_file='aglmcmc_results.csv')
     print(esjd(chain_glmcmc))
     # chain_glmala =runner.run_glmala(num_ite, theta0, y0, 0.8, ip, 5, 0.3, 100, output_file='glmala_results.csv')
-    # chain_glmcmc_nf =runner.run_glmcmc_nf(num_ite, 0.5, lp, 5, gp_base, 200, 50, output_file='glmcmc_nf_results.csv')
+    # chain_glmcmc_nf =runner.run_glmcmc_nf(num_ite, theta0, y0,0.5, lp, gp_base,5,200,
+    #                                       50, output_file='glmcmc_nf_results.csv')

@@ -8,5 +8,7 @@ from .distribution import (
 )
 from .GLMALA import GLMALA
 from .GLMCMC import GLMCMC
+from .AGLMCMC import AGLMCMC
 from .GLMCMC_NFs import GLMCMC_NF
 from .ESJD import esjd
+from .kernel_density import KernelDensity

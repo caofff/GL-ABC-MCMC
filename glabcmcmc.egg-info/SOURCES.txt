@@ -1,5 +1,6 @@
 README.md
 setup.py
+glabcmcmc/AGLMCMC.py
 glabcmcmc/ESJD.py
 glabcmcmc/GLMALA.py
 glabcmcmc/GLMCMC.py
@@ -8,6 +9,7 @@ glabcmcmc/GlobalMCMC.py
 glabcmcmc/MCMCRunner.py
 glabcmcmc/__init__.py
 glabcmcmc/distribution.py
+glabcmcmc/kernel_density.py
 glabcmcmc.egg-info/PKG-INFO
 glabcmcmc.egg-info/SOURCES.txt
 glabcmcmc.egg-info/dependency_links.txt

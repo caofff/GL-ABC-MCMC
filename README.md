@@ -10,6 +10,7 @@ GL-ABC-MCMC is a Python package, whichoffers a variety of GL-ABC-MCMC sampling m
   - `GLMCMC`: The global proposal of `GlobalMCMC` is replaced with one constructed using iSIR.
   - `GLMALA`: This version uses MALA as the local proposal in the  `GLMCMC` algorithm.
   -`GLMCMC-NFs`: Building upon GLMCMC, this implementation utilizes normalizing flows to enhance the global proposal distribution. 
+  - `AGLMCMC`: By introducing an intermediate objective function, the global proposal is gradually improved during the iterative process using a density estimator.
 
 - **Built-in Probability Distributions**:
   - Uniform distribution
